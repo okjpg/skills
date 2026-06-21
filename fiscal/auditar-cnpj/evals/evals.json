@@ -1,0 +1,15 @@
+{
+  "skill_name": "auditar-cnpj",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "audita o cnpj 11.222.333/0001-81",
+      "expected_output": "Report markdown 'Raio-X CNPJ — {RAZÃO SOCIAL}' com Score Geral 0–100 e faixa, tabela de perspectivas (situação cadastral; Simples Nacional conforme enquadramento; Compliance com score; risco de due diligence), seção de pontos de atenção, análise interpretativa de negócio, recomendação acionável e bloco de cobertura indicando quantas das 6 dimensões entraram no score. Sem emojis."
+    },
+    {
+      "id": 2,
+      "prompt": "faz um raio-x do cnpj 42.750.901/0001-72",
+      "expected_output": "Detecta DV inválido ANTES de qualquer chamada de API; informa que o CNPJ é inválido (DV informado 72, correto para a base seria 40); não inventa dados; pede reconfirmação do número ou oferece buscar pela razão social. Nenhuma tool MCP é chamada."
+    }
+  ]
+}
