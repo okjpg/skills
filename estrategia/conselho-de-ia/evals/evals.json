@@ -1,0 +1,20 @@
+{
+  "skill_name": "conselho-de-ia",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "conselho: lanço meu curso como produto pago de R$97 ou como isca gratuita pra vender o programa maior depois?",
+      "expected_output": "Take rápido ancorado no perfil de pensamento do usuário, fechando com 'conselho: sim — <motivo>' porque é decisão de posicionamento com dois lados defensáveis. Pergunta se deve rodar o conselho e aguarda confirmação explícita antes de gastar o debate multi-LLM. Não dispara sem o sim."
+    },
+    {
+      "id": 2,
+      "prompt": "conselho: uso azul ou verde no botão de CTA?",
+      "expected_output": "Take rápido curto, fechando com 'conselho: não precisa' porque é decisão reversível de baixo custo que um teste A/B resolve. Não convoca o conselho — o gate de custo funciona nos dois sentidos."
+    },
+    {
+      "id": 3,
+      "prompt": "Rodar o conselho quando os três conselheiros concordam entre si e com o usuário já na rodada 1",
+      "expected_output": "Trata a concordância unânime como sinal de claque, não de consenso. Na rodada 2, instrui cada lente a construir o melhor caso CONTRA a posição do usuário antes de convergir. A regra anti-claque impede que três LLMs lendo o perfil apenas devolvam o que o usuário já pensa."
+    }
+  ]
+}
