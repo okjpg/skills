@@ -24,6 +24,9 @@ esac; }
 ANTIECHO='REGRA: o perfil descreve COMO a pessoa julga, inclusive onde ela falha - NAO a resposta certa. Voce pode e deve afirmar que um vies dela esta errado aqui. Concordar nao e o objetivo; testar e. No maximo 12 linhas, sem preambulo.'
 
 # roda o agente enxuto: nome provider modelo prompt_file out_file
+# Nota: se uma lente falha, o marcador [LENTE ... FALHOU] entra como "parecer" nas
+# rodadas seguintes. Não quebra o debate, mas a síntese deve tratar lente ausente
+# explicitamente. Para exigir robustez, filtre marcadores de falha antes da rodada 2.
 run() { timeout 300 $ONESHOT "$(cat "$4")" --provider "$2" -m "$3" $LEAN_FLAGS > "$5" 2>&1 \
         || echo "[LENTE $1 FALHOU OU ESTOUROU TIMEOUT]" > "$5"; }
 
